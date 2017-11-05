@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.beans.property.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.media.Media?>
+<?import javafx.scene.media.MediaPlayer?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Label?>
+
+
+<BorderPane id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+	prefWidth="400.0" onKeyPressed="#handleKeyPressed" onKeyReleased="#handleKeyReleased"
+	fx:controller="application.Controller" xmlns:fx="http://javafx.com/fxml"
+	stylesheets="@application.css">
+	<padding>
+		<Insets top="25" right="25" bottom="10" left="25" />
+	</padding>
+	<top>
+		<VBox spacing="25" alignment="TOP_CENTER">
+			<Text id = "Welcome-Text" text="LeJOS EV3 APPLICATION" />
+			<Text id = "Controltype" text="Choose Control Type" />
+			<HBox spacing="25" alignment="TOP_CENTER" >
+				<Button id="generalButton" text="Manual" prefWidth="150" prefHeight="60" onAction="#manualControl" />
+				<Button id="generalButton" text="Demo" prefWidth="150" prefHeight="60" onAction="#demoMode" />
+			</HBox>
+		</VBox>
+	</top>
+	<left>
+		<VBox spacing="25" alignment="CENTER">
+			<Text id="generalText" text="Robot Controls" />
+			<Button id="FWD" fx:id="buttonMoveFWD" prefWidth="100" prefHeight="80" />
+				<HBox spacing="25" alignment="CENTER">
+					<Button id="LEFT" fx:id="buttonMoveLeft" prefWidth="80" prefHeight="100" />
+					<Button id="generalButton" text="PlayVideo" prefWidth="100" prefHeight="60" font="$FONT" onAction = "#playVideo" />
+					<Button id="RIGHT" fx:id="buttonMoveRight" prefWidth="80" prefHeight="100" />
+				</HBox>
+			<Button id="BCK" fx:id="buttonMoveBCK" prefWidth="100" prefHeight="80" />
+		</VBox>
+	</left>
+	<right>
+		<VBox spacing="25" alignment="CENTER" >
+			<Text id="generalText" text="Turret Controls" />
+			<HBox spacing="25" alignment="CENTER">
+				<Button id="LEFT" fx:id="rotateLeft" text="Left" prefWidth="80" prefHeight="100" />
+				<Button id="generalButton" fx:id="shoot" text="Fire" prefWidth="100" prefHeight="60" font="$FONT" />
+				<Button id="RIGHT" fx:id="rotateRight" text="Right" prefWidth="80" prefHeight="100" />
+			</HBox>
+		</VBox>
+	</right>
+	<center>
+		<StackPane prefHeight="620.0" prefWidth="820.0" alignment="CENTER" >
+			<Rectangle fill="TRANSPARENT" stroke="#e08804" width="802.0" height="602.0" />
+			<MediaView fx:id="mediaView" fitHeight="600.0" fitWidth="800.0" />
+		</StackPane>
+	</center>
+	<bottom>
+		<HBox spacing="25" alignment="CENTER" >
+			<Text id="Bottom" text="Your current speed " />
+			<Text id="Bottom" fx:id = "sliderValue" />
+			<Slider fx:id="speedSlider" orientation="HORIZONTAL" prefWidth="820" min="400" max="1000" blockIncrement="100" />
+			<Text id="Bottom" text="Battery Status " />
+			<Text id="Bottom" fx:id="batteryStatus" />
+		</HBox>
+	</bottom>
+
+</BorderPane>

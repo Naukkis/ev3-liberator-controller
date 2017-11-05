@@ -1,0 +1,79 @@
+.root {
+     -fx-background-image: url("Background.jpg");
+}
+
+#Welcome-Text {
+   -fx-font-size: 30px;
+   -fx-font-family: "Arial Black";
+   -fx-fill: #e08804;
+   -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+#Controltype {
+   -fx-font-size: 28px;
+   -fx-font-family:  "Arial Black";
+   -fx-fill: #e08804;
+   -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+#Bottom {
+   -fx-font-size: 28px;
+   -fx-font-family:  "Arial Black";
+   -fx-fill: #e08804;
+   -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+#generalText{
+	-fx-font-size: 22px;
+   -fx-font-family:  "Arial Black";
+   -fx-fill: #e08804;
+   -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+.button{
+	-fx-text-fill: white;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-background-color:linear-gradient( rgb(255,107,36),rgb(0,0,0));
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+#FWD {
+
+    -fx-background-image: url(forward.png);
+    -fx-background-size: 80 100;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+}
+
+#BCK {
+
+    -fx-background-image: url(back.png);
+    -fx-background-size: 80 100;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+}
+
+#RIGHT {
+
+    -fx-background-image: url(right.png);
+    -fx-background-size: 80 100;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+}
+
+#LEFT {
+
+    -fx-background-image: url(left.png);
+ 	-fx-background-size: 80 100;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+}
+
+.button:hover {
+    -fx-background-color:linear-gradient(rgb(128,0,0) , rgb(0,0,0));
+}
